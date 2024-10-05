@@ -2,7 +2,9 @@
   "name": "@nx-playground/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:graph": "nx build nx-playground --graph"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",

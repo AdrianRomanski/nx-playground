@@ -12,7 +12,11 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml",
+      "{workspaceRoot}/.github/workflows/inputs.yml",
+      { "runtime": "node --version" }
+    ]
   },
   "nxCloudId": "66ff9340bd895050af5943e6",
   "targetDefaults": {
