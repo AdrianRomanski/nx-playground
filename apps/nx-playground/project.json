@@ -10,7 +10,7 @@
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/nx-playground",
+        "outputPath": "dist/apps/nx-playground-outputs-playing",
         "index": "apps/nx-playground/src/index.html",
         "browser": "apps/nx-playground/src/main.ts",
         "polyfills": ["zone.js"],
@@ -64,7 +64,8 @@
           "buildTarget": "nx-playground:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "dependsOn": ["preserve"]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -90,6 +91,9 @@
         "staticFilePath": "dist/apps/nx-playground/browser",
         "spa": true
       }
+    },
+    "preserve": {
+      "command": "echo PreServe, training task pipeline"
     }
   }
 }
