@@ -94,6 +94,9 @@
     },
     "preserve": {
       "command": "echo PreServe, training task pipeline"
+    },
+    "make": {
+      "command": "make hello"
     }
   }
 }
