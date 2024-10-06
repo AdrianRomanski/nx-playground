@@ -3,7 +3,21 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:graph": "nx build nx-playground --graph"
+    "build:graph": "nx build nx-playground --graph",
+    "create-json": "node ./tools/createProjectJson.js --verbose"
+  },
+  "nx": {
+    "targets": {
+      "create-json": {
+        "inputs": [
+          "{workspaceRoot}/tools/createProjectJson.js"
+        ],
+        "outputs": [
+          "{workspaceRoot}/apps/my-app/project.json"
+        ],
+        "cache": true
+      }
+    }
   },
   "private": true,
   "dependencies": {
