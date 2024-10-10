@@ -4,7 +4,12 @@
   "license": "MIT",
   "scripts": {
     "build:graph": "nx build nx-playground --graph",
-    "create-json": "node ./tools/createProjectJson.js --verbose"
+    "create-json": "node ./tools/createProjectJson.js --verbose",
+    "watch-and-build-on-change": "nx watch --all -- nx run \\$NX_PROJECT_NAME:build",
+    "watch-and-echo": "npx -c 'nx watch --all -- echo \\$NX_PROJECT_NAME'",
+    "watch-for-specific-project": "nx watch --projects=nx-playground -- echo \\$NX_FILE_CHANGES",
+    "watch-for-dependant-project": "nx watch --projects=nx-playground --includeDependentProjects -- echo \\$NX_PROJECT_NAME",
+    "watch-and-rebuild-libraries": "nx watch --projects=nx-playground --includeDependentProjects -- nx run-many -t build -p \\$NX_PROJECT_NAME --exclude=nx-playground"
   },
   "nx": {
     "targets": {
