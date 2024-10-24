@@ -9,7 +9,9 @@
     "watch-and-echo": "npx -c 'nx watch --all -- echo \\$NX_PROJECT_NAME'",
     "watch-for-specific-project": "nx watch --projects=nx-playground -- echo \\$NX_FILE_CHANGES",
     "watch-for-dependant-project": "nx watch --projects=nx-playground --includeDependentProjects -- echo \\$NX_PROJECT_NAME",
-    "watch-and-rebuild-libraries": "nx watch --projects=nx-playground --includeDependentProjects -- nx run-many -t build -p \\$NX_PROJECT_NAME --exclude=nx-playground"
+    "watch-and-rebuild-libraries": "nx watch --projects=nx-playground --includeDependentProjects -- nx run-many -t build -p \\$NX_PROJECT_NAME --exclude=nx-playground",
+    "skip-caching": "nx run nx-playground:build --skip-nx-cache",
+    "skip-cloud": "nx run nx-playground:build --no-cloud"
   },
   "nx": {
     "targets": {
@@ -59,7 +61,7 @@
     "@nx/workspace": "19.8.3",
     "@playwright/test": "^1.36.0",
     "@schematics/angular": "~18.2.0",
-    "@swc-node/register": "~1.9.1",
+    "@swc-node/register": "^1.10.9",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@types/express": "4.17.14",
@@ -67,7 +69,7 @@
     "@types/node": "18.16.9",
     "@typescript-eslint/utils": "^7.16.0",
     "angular-eslint": "^18.3.0",
-    "eslint": "^9.8.0",
+    "eslint": "^8.57",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-playwright": "^1.6.2",
     "jest": "^29.7.0",
