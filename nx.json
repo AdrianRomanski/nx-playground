@@ -14,7 +14,9 @@
     ],
     "sharedGlobals": [
       "{workspaceRoot}/.github/workflows/ci.yml",
-      { "runtime": "node --version" }
+      {
+        "runtime": "node --version"
+      }
     ]
   },
   "nxCloudId": "66ff9340bd895050af5943e6",
@@ -61,6 +63,12 @@
       "plugin": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
       }
     }
   ],
