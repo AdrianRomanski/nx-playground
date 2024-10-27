@@ -4,7 +4,8 @@
     "default": {
       "runner": "@nx/workspace/tasks-runners/default",
       "options": {
-        "cacheDirectory": ".custom-cache-location/.nx/cache"
+        "cacheDirectory": ".custom-cache-location/.nx/cache",
+        "cacheableOperations": ["e2e", "lint", "test", "e2e-ci"]
       }
     }
   },
@@ -57,7 +58,8 @@
       }
     },
     "e2e-ci": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "cache": true
     }
   },
   "plugins": [
